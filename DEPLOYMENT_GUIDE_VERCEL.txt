@@ -1,0 +1,64 @@
+================================================================================
+STEP-BY-STEP DEPLOYMENT GUIDE: VIRTUAL LOCUS (GITHUB + VERCEL)
+================================================================================
+
+This guide outlines the most efficient process to deploy the current version of 
+Virtual Locus to a production-ready environment using GitHub and Vercel.
+
+PREREQUISITES
+-------------
+1.  A GitHub Account: [https://github.com/](https://github.com/)
+2.  A Vercel Account: [https://vercel.com/](https://vercel.com/) (Free Tier)
+3.  Git installed on your system.
+
+PHASE 1: PREPARING THE CODEBASE
+-------------------------------
+1.  Verify the Build:
+    Run `npm run build` in your terminal to ensure there are no errors.
+2.  Initialize Git:
+    `git init` (if not already initialized).
+3.  Add & Commit Files:
+    `git add .`
+    `git commit -m "feat: initial premium version of Virtual Locus"`
+
+PHASE 2: GITHUB SETUP
+---------------------
+1.  Create a new repository on GitHub (name it e.g., "virtual-locus-site").
+2.  Push your code:
+    `git remote add origin https://github.com/your-username/virtual-locus-site.git`
+    `git branch -M main`
+    `git push -u origin main`
+
+PHASE 3: VERCEL DEPLOYMENT (BEST TOOL)
+--------------------------------------
+1.  Login to Vercel:
+    Go to [https://vercel.com/import](https://vercel.com/import).
+2.  Import Project:
+    Select the "virtual-locus-site" repository from your GitHub list.
+3.  Configure Settings:
+    - Framework Preset: Next.js (automatically detected).
+    - Environment Variables: If you have a `.env.local` file (e.g., for API 
+      keys), add those same keys under "Environment Variables" in Vercel.
+4.  Deploy:
+    Click "Deploy". Vercel will build and host your site in ~60 seconds.
+5.  Custom Domain:
+    Go to "Settings > Domains" in Vercel to connect your official URL.
+
+PHASE 4: ONGOING UPDATES
+------------------------
+Any time you want to update the site, simply push to your GitHub 'main' branch:
+- `git commit -am "Updated contact info"`
+- `git push origin main`
+Vercel will automatically detect the changes and rebuild the site live.
+
+WHY THIS METHOD?
+----------------
+- Automatic SSL (HTTPS): Vercel handles all security certificates.
+- Global CDN: Your site will load fast from anywhere in the world.
+- Continuous Deployment: One-click updates via GitHub.
+- Best for Next.js: Vercel is the creator of Next.js and provides the best 
+  possible performance and support for it.
+
+================================================================================
+Generated on: 2026-03-01
+================================================================================

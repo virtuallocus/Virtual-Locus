@@ -1,0 +1,50 @@
+================================================================================
+VIRTUAL LOCUS - BUSINESS & SITE SUMMARY
+================================================================================
+
+1. BUSINESS OVERVIEW
+--------------------
+Name: VIRTUAL LOCUS
+Type: Premium Digital Architecture & Solutions Agency
+Tagline: We Build Digital Systems That Grow Businesses.
+Mission: To integrate high-performance web development, performance-driven 
+marketing, and cinematic storytelling into cohesive growth engines for brands.
+
+2. CORE SERVICES
+----------------
+- Web Development: Custom websites, eCommerce, and robust web applications.
+- Digital Marketing: Paid ads, SEO, social media management, and CRO.
+- Video Production: Brand films, performance ads, and motion graphics.
+
+3. CONTACT INFORMATION
+----------------------
+- Email: virtuallocus@gmail.com
+- Primary Phone: +91 76200 89669
+- Secondary Phone: +91 95615 99403
+- Availability: Worldwide (Digital-First)
+
+4. LEADERSHIP TEAM
+------------------
+- Tejas Waje: Founder & Lead Architect
+- Om Pendharkar: Co-Founder & Tech Lead
+
+5. WEBSITE ARCHITECTURE
+-----------------------
+- Framework: Next.js 14+ (App Router)
+- Language: TypeScript
+- Styling: Tailwind CSS
+- Icons: Lucide React
+- Typography: Inter (Body), Space Grotesk (Headings)
+
+- Official Brand Logo in Header & Footer.
+- Fixed Transparent Header (Sticky states preserved on refresh).
+- Real-time WhatsApp Chat Button.
+- Sticky Branded Social Sidebar.
+- Fully Responsive Design (Mobile, Tablet, Desktop).
+- Interactive Service Cards with immersive hover effects.
+- Dynamic Team Page (currently hidden in src/app/_team).
+- SEO-optimized metadata and semantic HTML structure.
+
+================================================================================
+Created on: 2026-03-01
+================================================================================
