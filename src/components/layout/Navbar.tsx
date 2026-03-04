@@ -68,13 +68,20 @@ export default function Navbar() {
                 </div>
 
                 {/* Mobile Menu Button */}
-                <button className="md:hidden text-slate-900" onClick={() => setIsOpen(!isOpen)}>
+                <button
+                    className="md:hidden text-slate-900 p-2 hover:bg-slate-50 rounded-lg transition-colors"
+                    onClick={() => setIsOpen(!isOpen)}
+                    aria-label={isOpen ? "Close menu" : "Open menu"}
+                    aria-expanded={isOpen}
+                    aria-controls="mobile-menu"
+                >
                     {isOpen ? <X size={24} /> : <Menu size={24} />}
                 </button>
             </div>
 
             {/* Mobile Nav */}
             <div
+                id="mobile-menu"
                 className={`md:hidden absolute top-full left-0 w-full bg-white border-t border-slate-100 transition-all duration-300 shadow-xl overflow-hidden ${isOpen ? "max-h-[400px]" : "max-h-0"
                     }`}
             >
