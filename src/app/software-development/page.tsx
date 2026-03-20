@@ -30,7 +30,7 @@ export default function SoftwareDevelopment() {
             step: "01",
             title: "Architecture & Discovery",
             desc: "We analyze your technical requirements and construct a resilient system architecture blueprint to handle future scale.",
-            image: "/images/w-step-1.png",
+            image: "/images/w-step-2.png",
             items: ["Tech Stack Selection", "System Architecture Design", "Feasibility Analysis"],
             result: "A robust technical blueprint."
         },
@@ -46,7 +46,7 @@ export default function SoftwareDevelopment() {
             step: "03",
             title: "Quality Assurance & Testing",
             desc: "Rigorous automated and manual testing to ensure your software is bug-free, secure, and reliable.",
-            image: "/images/w-step-5.png",
+            image: "/images/w-step-1.png",
             items: ["Unit & Integration Testing", "Security Audits", "Performance Testing"],
             result: "Flawless, production-ready software."
         },
@@ -54,7 +54,7 @@ export default function SoftwareDevelopment() {
             step: "04",
             title: "Deployment & Scaling",
             desc: "Smooth deployment pipelines utilizing modern DevOps practices for zero-downtime releases.",
-            image: "/images/w-step-6.png",
+            image: "/images/w-step-5.png",
             items: ["CI/CD Pipelines", "Docker/Kubernetes", "Monitoring Setup"],
             result: "Effortless, scalable deployment."
         }
@@ -180,94 +180,53 @@ export default function SoftwareDevelopment() {
                                     </div>
                                 </div>
                                 <div className="lg:w-1/2 w-full">
-                                    <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-[#0A0A0A] border-4 border-white h-[400px] p-8 flex flex-col justify-center group/hud">
-                                        <div className="absolute inset-0 opacity-20 transition-transform duration-1000 group-hover/hud:scale-110">
-                                            <Image src={step.image} alt={step.title} fill className="object-cover grayscale" />
-                                        </div>
-                                        
-                                        {i === 0 && (
-                                            <div className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8 relative z-10 transform -rotate-2 group-hover/hud:rotate-0 transition-all duration-500 shadow-2xl">
-                                                <div className="flex items-center gap-4 mb-8">
-                                                    <div className="w-12 h-12 bg-[#56B2C7] rounded-xl flex items-center justify-center shadow-lg shadow-[#56B2C7]/20">
-                                                        <Search className="text-white" size={24} />
-                                                    </div>
-                                                    <div>
-                                                        <div className="text-[10px] font-black text-[#56B2C7] uppercase tracking-widest">Discovery Phase</div>
-                                                        <div className="text-white font-black text-lg">Logic Mapping</div>
-                                                    </div>
-                                                </div>
-                                                <div className="flex flex-col gap-3">
-                                                    {[1, 2, 3].map(j => (
-                                                        <div key={j} className="h-2 w-full bg-white/10 rounded-full overflow-hidden">
-                                                            <div className={`h-full bg-[#56B2C7] rounded-full w-[${30 + j * 20}%] opacity-60`}></div>
-                                                        </div>
-                                                    ))}
-                                                </div>
-                                            </div>
-                                        )}
-
-                                        {i === 1 && (
-                                            <div className="bg-white/5 backdrop-blur-2xl rounded-2xl border border-white/10 p-8 relative z-10 shadow-2xl">
-                                                <div className="flex items-center gap-4 mb-6">
-                                                    <div className="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center shadow-lg shadow-green-500/20">
-                                                        <Terminal className="text-white" size={24} />
-                                                    </div>
-                                                    <div>
-                                                        <div className="text-[10px] font-black text-green-400 uppercase tracking-widest">Active Development</div>
-                                                        <div className="text-white font-black text-lg">Sprint Cycle #12</div>
-                                                    </div>
-                                                </div>
-                                                <div className="bg-black/50 p-4 rounded-lg font-mono text-[10px] text-green-400 space-y-1">
-                                                    <div>{">"} npm run build:prod</div>
-                                                    <div className="animate-pulse">{">"} compiling assets... done</div>
-                                                    <div>{">"} bundle size: 42.4kb</div>
-                                                </div>
-                                            </div>
-                                        )}
-
-                                        {i === 2 && (
-                                            <div className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8 relative z-10 transform scale-95 group-hover/hud:scale-100 transition-all duration-500 shadow-2xl">
-                                                <div className="flex items-center gap-4 mb-6">
-                                                    <div className="w-12 h-12 bg-red-500 rounded-xl flex items-center justify-center shadow-lg shadow-red-500/20">
-                                                        <Bug className="text-white" size={24} />
-                                                    </div>
-                                                    <div>
-                                                        <div className="text-[10px] font-black text-red-400 uppercase tracking-widest">QA Automation</div>
-                                                        <div className="text-white font-black text-lg">Stress Testing</div>
-                                                    </div>
-                                                </div>
-                                                <div className="grid grid-cols-2 gap-4">
-                                                    <div className="text-center">
-                                                        <div className="text-[10px] text-white/40 uppercase mb-1 font-bold">Passed</div>
-                                                        <div className="text-2xl font-black text-green-400 tracking-tighter">1,240</div>
-                                                    </div>
-                                                    <div className="text-center border-l border-white/10 text-slate-300">
-                                                        <div className="text-[10px] text-white/40 uppercase mb-1 font-bold">Failed</div>
-                                                        <div className="text-2xl font-black text-white/20 tracking-tighter">0</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        )}
-
-                                        {i === 3 && (
-                                            <div className="bg-white/5 backdrop-blur-2xl rounded-[2.5rem] border border-white/20 p-10 relative z-10 shadow-2xl overflow-hidden">
-                                                <div className="flex items-center gap-6 mb-8">
-                                                    <div className="w-16 h-16 bg-gradient-to-tr from-[#56B2C7] to-indigo-600 rounded-2xl flex items-center justify-center shadow-2xl rotate-6 group-hover/hud:rotate-0 transition-transform duration-500">
-                                                        <Zap className="text-white" size={32} />
-                                                    </div>
-                                                    <div>
-                                                        <div className="text-[10px] font-black text-[#56B2C7] uppercase tracking-[0.2em] mb-1">Live Server</div>
-                                                        <div className="text-2xl font-black text-white leading-none tracking-tighter underline decoration-[#56B2C7] decoration-4 underline-offset-8">SCALABILITY</div>
-                                                    </div>
-                                                </div>
-                                                <div className="flex items-center gap-2 text-green-400 font-black text-[10px] tracking-widest bg-green-400/10 px-4 py-2 rounded-full w-fit">
-                                                    <div className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse"></div>
-                                                    CD_PIPELINE: SUCCESS
-                                                </div>
-                                            </div>
-                                        )}
+                                    <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white h-[400px]">
+                                        <Image 
+                                            src={step.image} 
+                                            alt={step.title} 
+                                            fill 
+                                            className="object-cover transition-transform duration-700 hover:scale-105" 
+                                        />
                                     </div>
                                 </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Engineering Stack */}
+            <section className="py-24 bg-slate-900 text-white relative overflow-hidden">
+                <div className="absolute inset-0 opacity-10">
+                    <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#56B2C7_1px,transparent_1px)] [background-size:24px_24px]"></div>
+                </div>
+                <div className="container mx-auto px-6 relative z-10">
+                   <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+                       <div className="max-w-2xl text-left">
+                            <h2 className="text-4xl md:text-5xl font-heading font-black mb-6 tracking-tighter">Our Core <span className="text-[#56B2C7]">Engineering Stack</span></h2>
+                            <p className="text-slate-400 font-medium">We utilize high-performance tools to build resilient, enterprise-grade software architectures.</p>
+                       </div>
+                       <div className="flex items-center gap-6 text-slate-500 font-bold uppercase text-xs tracking-widest border-l border-white/10 pl-8">
+                           Distributed Systems | Cloud Native | High Availability
+                       </div>
+                   </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                        {[
+                            { title: "Frontend", items: ["Next.js 14", "React", "TypeScript", "TailwindCSS", "Framer Motion", "Three.js", "Zustand", "Redux"] },
+                            { title: "Backend", items: ["Node.js", "Python", "Go", "PostgreSQL", "NestJS", "FastAPI", "gRPC", "Prisma"] },
+                            { title: "Infrastructure", items: ["AWS", "Docker", "Kubernetes", "Redis", "Terraform", "GitHub Actions", "Nginx", "MongoDB"] },
+                            { title: "Monitoring", items: ["Grafana", "Prometheus", "Sentry", "New Relic", "Datadog", "LogRocket", "Mixpanel", "Segment"] }
+                        ].map((cat, i) => (
+                            <div key={i} className="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-3xl hover:bg-white/10 transition-colors">
+                                <h4 className="text-[#56B2C7] font-black text-sm uppercase tracking-widest mb-6 border-b border-white/5 pb-2">{cat.title}</h4>
+                                <ul className="grid grid-cols-1 gap-y-3">
+                                    {cat.items.map((t, idx) => (
+                                        <li key={idx} className="text-white font-bold text-[11px] flex items-center gap-2">
+                                            <div className="w-1 h-1 rounded-full bg-[#56B2C7]"></div>{t}
+                                        </li>
+                                    ))}
+                                </ul>
                             </div>
                         ))}
                     </div>

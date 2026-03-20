@@ -20,9 +20,10 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "VIRTUAL LOCUS",
-  description: "VIRTUAL LOCUS delivers high-impact software development, scalable B2B SaaS solutions, and intelligent AI automation for modern businesses.",
+  title: "VIRTUAL LOCUS | Software Development, B2B SaaS & AI Automation",
+  description: "Virtual Locus is a premier technology agency specializing in custom enterprise software, scalable B2B SaaS platforms, and intelligent AI automation for global brands.",
   metadataBase: new URL('https://www.virtuallocus.in'),
+  keywords: ["Software Development Company", "B2B SaaS Solutions", "AI Automation Agency", "Custom AI Agents", "Enterprise Software", "Web App Development", "Tech Consulting"],
   twitter: {
     card: "summary_large_image",
     site: "@VirtualLocus",
@@ -30,8 +31,8 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    title: "VIRTUAL LOCUS",
-    description: "VIRTUAL LOCUS delivers high-impact software development, scalable B2B SaaS solutions, and intelligent AI automation for modern businesses.",
+    title: "VIRTUAL LOCUS | Custom Software & AI Automation",
+    description: "Build, Scale, and Automate with Virtual Locus. Custom enterprise software and AI solutions designed for growth.",
     siteName: "Virtual Locus",
   },
   icons: {

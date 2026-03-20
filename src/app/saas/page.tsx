@@ -30,7 +30,7 @@ export default function SaaSDevelopment() {
             step: "01",
             title: "SaaS Strategy & Prototyping",
             desc: "Validating your product concept to guarantee market fit. We design interactive UI/UX prototypes before writing a single line of code.",
-            image: "/images/w-step-1.png",
+            image: "/images/w-step-2.png",
             items: ["Market Validation", "UI/UX Prototyping", "MVP Definition"],
             result: "A mapped-out SaaS product ready for engineering."
         },
@@ -46,7 +46,7 @@ export default function SaaSDevelopment() {
             step: "03",
             title: "Payments & Feature Scale",
             desc: "Implementing subscription systems and billing cycles, followed by building out advanced features required by your user segments.",
-            image: "/images/w-step-2.png",
+            image: "/images/w-step-1.png",
             items: ["Stripe/Paddle Integration", "Pricing Tiers", "Feature Expansion"],
             result: "A fully monetizable SaaS platform."
         },
@@ -181,126 +181,54 @@ export default function SaaSDevelopment() {
                                     </div>
                                 </div>
                                 <div className="lg:w-1/2 w-full">
-                                    {i === 0 && (
-                                        <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-[#0A0A0A] border-4 border-white h-[400px] p-8 flex flex-col justify-center group">
-                                            <div className="absolute inset-0 opacity-20 transition-transform duration-700 group-hover:scale-110">
-                                                <Image src={step.image} alt={step.title} fill className="object-cover grayscale" />
-                                            </div>
-                                            <div className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8 relative z-10 transform -rotate-2 group-hover:rotate-0 transition-all duration-500 shadow-2xl">
-                                                <div className="flex items-center gap-4 mb-8">
-                                                    <div className="w-12 h-12 bg-indigo-500 rounded-xl flex items-center justify-center shadow-lg shadow-indigo-500/20">
-                                                        <LayoutDashboard className="text-white" size={24} />
-                                                    </div>
-                                                    <div>
-                                                        <div className="text-[10px] font-black text-indigo-400 uppercase tracking-widest">Blueprint Alpha</div>
-                                                        <div className="text-white font-black text-lg">System Layout</div>
-                                                    </div>
-                                                </div>
-                                                <div className="space-y-4">
-                                                    <div className="flex justify-between items-end">
-                                                        <div className="text-[10px] font-bold text-white/40 uppercase">Wireframe Progress</div>
-                                                        <div className="text-xs font-black text-white">85%</div>
-                                                    </div>
-                                                    <div className="h-2 w-full bg-white/10 rounded-full overflow-hidden">
-                                                        <div className="h-full w-[85%] bg-indigo-500 shadow-[0_0_10px_rgba(99,102,241,0.5)]"></div>
-                                                    </div>
-                                                    <div className="grid grid-cols-3 gap-2 pt-2">
-                                                        {[1,2,3].map(j => <div key={j} className="h-8 bg-white/5 rounded border border-white/5"></div>)}
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    )}
-                                    {i === 1 && (
-                                        <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-[#050505] border-4 border-white h-[400px] p-8 flex flex-col justify-center group">
-                                            <div className="absolute inset-0 opacity-20 transition-transform duration-1000 group-hover:scale-125">
-                                                <Image src={step.image} alt={step.title} fill className="object-cover grayscale" />
-                                            </div>
-                                            <div className="bg-white/5 backdrop-blur-2xl rounded-2xl border border-white/10 p-8 relative z-10 shadow-2xl">
-                                                <div className="flex items-center gap-4 mb-8">
-                                                    <div className="w-12 h-12 bg-[#56B2C7] rounded-xl flex items-center justify-center shadow-lg shadow-[#56B2C7]/20">
-                                                        <Server className="text-white" size={24} />
-                                                    </div>
-                                                    <div>
-                                                        <div className="text-[10px] font-black text-[#56B2C7] uppercase tracking-widest">Core Engine</div>
-                                                        <div className="text-white font-black text-lg">Infrastructure</div>
-                                                    </div>
-                                                </div>
-                                                <div className="grid grid-cols-2 gap-4">
-                                                    <div className="bg-white/5 p-4 rounded-xl border border-white/10">
-                                                        <div className="text-[10px] font-bold text-white/30 uppercase mb-2">Instances</div>
-                                                        <div className="text-2xl font-black text-white">128</div>
-                                                    </div>
-                                                    <div className="bg-white/5 p-4 rounded-xl border border-white/10">
-                                                        <div className="text-[10px] font-bold text-white/30 uppercase mb-2">Latency</div>
-                                                        <div className="text-2xl font-black text-[#56B2C7]">14ms</div>
-                                                    </div>
-                                                </div>
-                                                <div className="mt-6 flex gap-1 justify-between">
-                                                    {[1,2,3,4,5,6,7,8,9,10].map(k => (
-                                                        <div key={k} className={`h-4 w-1 rounded-full ${k < 8 ? 'bg-[#56B2C7]' : 'bg-white/10'}`}></div>
-                                                    ))}
-                                                </div>
-                                            </div>
-                                        </div>
-                                    )}
-                                    {i === 2 && (
-                                        <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-[#0A0A0A] border-4 border-white h-[400px] p-8 flex flex-col justify-center group">
-                                            <div className="absolute inset-0 opacity-20 transition-transform duration-500 group-hover:scale-105">
-                                                <Image src={step.image} alt={step.title} fill className="object-cover grayscale" />
-                                            </div>
-                                            <div className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-6 mb-4 transform -rotate-3 group-hover:rotate-0 transition-transform duration-500 shadow-2xl relative z-10">
-                                                <div className="flex justify-between items-center mb-6">
-                                                    <div className="flex items-center gap-3">
-                                                        <div className="w-10 h-10 bg-[#56B2C7] rounded-lg flex items-center justify-center shadow-lg shadow-[#56B2C7]/20">
-                                                            <DollarSign className="text-white" size={20} />
-                                                        </div>
-                                                        <span className="font-heading font-black text-white uppercase text-xs tracking-widest">Billing Gateway</span>
-                                                    </div>
-                                                    <div className="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-[10px] font-black uppercase tracking-widest">Active</div>
-                                                </div>
-                                                <div className="h-6 w-1/3 bg-white/20 rounded mb-4"></div>
-                                                <div className="h-2 w-full bg-white/10 rounded-full overflow-hidden">
-                                                    <div className="h-full w-2/3 bg-[#56B2C7] animate-pulse"></div>
-                                                </div>
-                                            </div>
-                                            <div className="grid grid-cols-2 gap-4 relative z-10">
-                                                <div className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-6 transform rotate-3 group-hover:rotate-0 transition-transform duration-500 shadow-2xl overflow-hidden">
-                                                    <div className="text-[10px] font-black text-[#56B2C7] uppercase mb-4 tracking-widest leading-none">ARR Growth</div>
-                                                    <TrendingUp className="text-white opacity-10 absolute -top-4 -right-2" size={80} />
-                                                    <div className="text-2xl font-black text-white">+84%</div>
-                                                </div>
-                                                <div className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-6 transform -rotate-2 group-hover:rotate-0 transition-transform duration-500 shadow-2xl overflow-hidden">
-                                                    <div className="text-[10px] font-black text-[#56B2C7] uppercase mb-4 tracking-widest leading-none">New Users</div>
-                                                    <Users className="text-white opacity-10 absolute -top-4 -right-2" size={80} />
-                                                    <div className="text-2xl font-black text-white">412</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    )}
-                                    {i === 3 && (
-                                        <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-slate-950 border-4 border-white h-[400px] p-8 flex flex-col justify-center group">
-                                            <div className="absolute inset-0 opacity-20 transition-transform duration-1000 group-hover:scale-110">
-                                                <Image src={step.image} alt={step.title} fill className="object-cover grayscale" />
-                                            </div>
-                                            <div className="bg-white/5 backdrop-blur-2xl rounded-[2rem] border border-white/20 p-10 relative z-10 shadow-2xl transform hover:scale-105 transition-transform duration-500">
-                                                <div className="flex items-center gap-6 mb-8">
-                                                    <div className="w-16 h-16 bg-gradient-to-tr from-[#56B2C7] to-blue-600 rounded-2xl flex items-center justify-center shadow-2xl rotate-3">
-                                                        <Globe className="text-white" size={32} />
-                                                    </div>
-                                                    <div>
-                                                        <div className="text-[10px] font-black text-[#56B2C7] uppercase tracking-[0.2em] mb-1">Production</div>
-                                                        <div className="text-2xl font-black text-white leading-none tracking-tighter">GLOBAL OPS</div>
-                                                    </div>
-                                                </div>
-                                                <div className="flex items-center gap-2 text-green-400 font-black text-[10px] tracking-widest bg-green-400/10 px-4 py-2 rounded-full w-fit">
-                                                    <div className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse"></div>
-                                                    99.9% CLOUD UPTIME
-                                                </div>
-                                            </div>
-                                        </div>
-                                    )}
+                                    <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white h-[400px]">
+                                        <Image 
+                                            src={step.image} 
+                                            alt={step.title} 
+                                            fill 
+                                            className="object-cover" 
+                                        />
+                                    </div>
                                 </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* SaaS Tech Grid */}
+            <section className="py-24 bg-[#0A0A0A] text-white relative h-full">
+                <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-indigo-500/10 to-transparent pointer-events-none"></div>
+                <div className="container mx-auto px-6 relative z-10">
+                    <div className="flex flex-col md:flex-row justify-between items-center mb-16 gap-8 text-center md:text-left">
+                        <div className="max-w-2xl">
+                             <h2 className="text-4xl md:text-5xl font-heading font-black mb-6 tracking-tighter leading-none tracking-tight">Enterprise <span className="text-[#56B2C7]">SaaS Stack</span></h2>
+                             <p className="text-white/40 font-medium">Built for revenue, built for reliability, built for the future.</p>
+                        </div>
+                        <div className="bg-white/5 border border-white/10 px-8 py-4 rounded-full flex gap-10 text-[10px] font-black uppercase tracking-[0.2em] text-[#56B2C7]">
+                             <div className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-green-400"></div> HIPAA COMPLIANT</div>
+                             <div className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-green-400"></div> SOC2 READY</div>
+                        </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                        {[
+                            { title: "Billing & Revenue", items: ["Stripe Connect", "Paddle", "Appflow", "Chargebee", "Lago", "Togai", "Recurly", "Maxio", "Zuora", "LemonSqueezy", "Bill.com", "TaxJar"] },
+                            { title: "Auth & Users", items: ["Clerk", "Auth0", "WorkOS", "Firebase", "Descope", "Kinde", "Supabase Auth", "Stytch", "Okta", "Ping Identity", "Magic.link", "SuperTokens"] },
+                            { title: "Data & Scaling", items: ["Postgres (Prisma)", "Redis", "ElasticSearch", "Supabase", "Upstash", "Neon", "ClickHouse", "TiDB", "PlanetScale", "Snowflake", "BigQuery", "ScyllaDB"] },
+                            { title: "Infrastructure", items: ["Vercel", "AWS", "Fly.io", "Cloudflare", "Railway", "Render", "DigitalOcean", "Hetzner", "Linode", "Azure", "GCP", "Netlify"] }
+                        ].map((cat, i) => (
+                            <div key={i} className="bg-white/5 backdrop-blur-xl border border-white/10 p-8 rounded-3xl group hover:border-[#56B2C7]/50 transition-all shadow-2xl">
+                                <h4 className="text-[#56B2C7] font-black text-[10px] uppercase tracking-[0.3em] mb-8 flex justify-between items-center border-b border-white/5 pb-4">
+                                    {cat.title} <div className="w-1.5 h-1.5 bg-[#56B2C7] rounded-full"></div>
+                                </h4>
+                                <ul className="grid grid-cols-1 gap-y-3">
+                                    {cat.items.map((t, idx) => (
+                                        <li key={idx} className="text-white text-[11px] font-black tracking-tight flex items-center gap-3 group-hover:translate-x-1 transition-transform">
+                                            <div className="text-[#56B2C7]/40 font-black text-[9px] w-4">0{idx+1}</div> {t}
+                                        </li>
+                                    ))}
+                                </ul>
                             </div>
                         ))}
                     </div>

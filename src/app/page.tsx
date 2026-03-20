@@ -41,10 +41,10 @@ export default function Home() {
   ];
 
   const processSteps = [
-    { title: "Discovery", desc: "We analyze your unique business goals and challenges.", icon: Search, image: "/images/v-step-1.png" },
-    { title: "Strategy", desc: "Defining digital plans that drive sustainable growth.", icon: Target, image: "/images/v-step-2.png" },
-    { title: "Design & Dev", desc: "Building high-performance, tailored digital systems.", icon: Cpu, image: "/images/v-step-3.png" },
-    { title: "Launch", desc: "Rigorous testing and optimization and smooth deployment.", icon: Rocket, image: "/images/v-step-4.png" },
+    { title: "Discovery", desc: "We analyze your unique business goals and challenges.", icon: Search, image: "/images/w-step-2.png" },
+    { title: "Strategy", desc: "Defining digital plans that drive sustainable growth.", icon: Target, image: "/images/w-step-1.png" },
+    { title: "Design & Dev", desc: "Building high-performance, tailored digital systems.", icon: Cpu, image: "/images/w-step-3.png" },
+    { title: "Launch", desc: "Rigorous testing and optimization and smooth deployment.", icon: Rocket, image: "/images/w-step-5.png" },
     { title: "Growth", desc: "Continuous improvement, scaling, and future operation.", icon: LineChart, image: "/images/w-step-6.png" },
   ];
 
@@ -90,7 +90,7 @@ export default function Home() {
               <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white h-auto min-h-[250px] md:min-h-0">
                 <Image
                   src="/images/hero.png"
-                  alt="Workplace setup"
+                  alt="Custom Software Development, SaaS Solutions, & AI Automation Agency - Virtual Locus"
                   width={1200}
                   height={800}
                   className="w-full h-auto object-cover rounded-[2.5rem]"
@@ -137,29 +137,65 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
             {processSteps.map((step, index) => (
               <div key={index} className="flex flex-col items-center text-center group">
-                <div className="relative w-full aspect-square mb-6 rounded-2xl overflow-hidden shadow-md group-hover:shadow-2xl transition-all border-4 border-white bg-[#0A0A0A] p-0 flex items-center justify-center overflow-hidden">
-                   <div className="absolute inset-0 opacity-20 group-hover:opacity-40 transition-opacity duration-500 overflow-hidden">
+                <div className="relative w-full aspect-square mb-6 rounded-2xl overflow-hidden shadow-md group-hover:shadow-2xl transition-all border-4 border-white bg-white p-0 flex items-center justify-center overflow-hidden">
+                   <div className="absolute inset-0 transition-opacity duration-500 overflow-hidden">
                       <Image 
                         src={step.image} 
                         alt={step.title}
                         fill
-                        className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-110 group-hover:scale-100"
+                        className="object-cover transition-all duration-700 scale-105 group-hover:scale-110"
                       />
-                   </div>
-                   
-                   {/* Mini HUD Overlay */}
-                   <div className="relative z-10 w-full px-4 group-hover:scale-110 transition-transform duration-500">
-                      <div className="bg-white/5 backdrop-blur-xl rounded-xl border border-white/10 p-4 shadow-2xl">
-                         <div className="text-[#56B2C7] mb-2 transform group-hover:rotate-12 transition-transform">
-                            <step.icon size={24} className="mx-auto" />
-                         </div>
-                         <div className="text-[8px] font-black text-white/50 uppercase tracking-widest mb-1">Phase 0{index + 1}</div>
-                         <div className="text-white font-black text-[10px] leading-tight">{step.title}</div>
-                      </div>
                    </div>
                 </div>
                 <h3 className="text-lg font-heading font-black text-slate-900 mb-2">{step.title}</h3>
                 <p className="text-slate-500 text-[10px] leading-relaxed font-medium px-2">{step.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Tech Stack Section */}
+      <section className="py-24 bg-white relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#56B2C7]/5 to-transparent pointer-events-none"></div>
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-heading font-black text-slate-900 mb-4 tracking-tight text-center">Our Technologes</h2>
+            <p className="text-slate-500 font-medium text-center">We only build with the most performant, battle-tested modern technologies.</p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            {[
+              {
+                category: "Software",
+                tech: ["Next.js", "TypeScript", "Node.js", "Express", "PostgreSQL", "Docker", "AWS", "Google Cloud", "Kubernetes", "Redis", "ElasticSearch", "Go", "Python", "GraphQL", "Azure", "S3", "Kafka", "RabbitMQ", "C#", "C++", "Rust", "Swift", "Kotlin", "React Native", "Flutter"],
+                color: "from-blue-500 to-indigo-600"
+              },
+              {
+                category: "SaaS",
+                tech: ["Stripe", "Clerk", "Prisma", "Redis", "Vercel", "Cloudflare", "Paddle", "Auth0", "WorkOS", "Supabase", "Upstash", "Axiom", "Resend", "Sentry", "PostHog", "LogRocket", "Mixpanel", "Amplitude", "Intercom", "Crisp", "HubSpot"],
+                color: "from-[#56B2C7] to-emerald-500"
+              },
+              {
+                category: "AI",
+                tech: ["OpenAI", "GPT-4o", "Claude 3.5", "Gemini Pro", "LangChain", "Pinecone", "Python", "Mistral", "Weaviate", "LlamaIndex", "AutoGPT", "CrewAI", "Deepgram", "Together AI", "HuggingFace", "PyTorch", "TensorFlow", "Pandas", "NumPy", "Scikit-Learn"],
+                color: "from-purple-500 to-pink-500"
+              }
+            ].map((stack, i) => (
+              <div key={i} className="group">
+                <div className="bg-[#F9F9F9] rounded-[2.5rem] p-8 border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500 relative overflow-hidden h-full flex flex-col">
+                   <div className={`absolute top-0 right-0 w-2 h-full bg-gradient-to-b ${stack.color} opacity-20`}></div>
+                   <h3 className="text-xl font-heading font-black text-slate-900 mb-6 border-b border-slate-200 pb-4 tracking-tighter group-hover:text-[#56B2C7] transition-colors leading-none">
+                      {stack.category} <span className="text-slate-300 font-light italic">Suite</span>
+                   </h3>
+                   <div className="flex flex-wrap gap-1.5 content-start">
+                      {stack.tech.map((t, idx) => (
+                        <div key={idx} className="bg-white px-2 py-1 rounded-md border border-slate-100 shadow-sm text-[9px] font-black text-slate-700 hover:border-[#56B2C7] hover:text-[#56B2C7] transition-all cursor-default scale-100 hover:scale-105">
+                           {t}
+                        </div>
+                      ))}
+                   </div>
+                </div>
               </div>
             ))}
           </div>

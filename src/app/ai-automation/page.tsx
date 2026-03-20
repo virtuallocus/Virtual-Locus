@@ -31,7 +31,7 @@ export default function AIAutomation() {
             step: "01",
             title: "Process Audit",
             desc: "We analyze your current operations to identify bottlenecks and repetitive tasks that are draining your resources.",
-            image: "/images/v-step-1.png",
+            image: "/images/w-step-1.png",
             items: ["Workflow Mapping", "Bottleneck ID", "ROI Calculation"],
             result: "Identified high-impact automation targets."
         },
@@ -39,7 +39,7 @@ export default function AIAutomation() {
             step: "02",
             title: "AI Strategy & Setup",
             desc: "Selecting the optimal AI models (GPT-4, Claude, Llama 3) and designing the data pipeline for your automation.",
-            image: "/images/v-step-4.png",
+            image: "/images/w-step-2.png",
             items: ["Model Selection", "Data Structuring", "Security Review"],
             result: "A secure, customized AI architecture."
         },
@@ -55,7 +55,7 @@ export default function AIAutomation() {
             step: "04",
             title: "Deployment & Optimization",
             desc: "Rolling out the automation into your live environment and continuously tuning the models based on human feedback.",
-            image: "/images/v-step-2.png",
+            image: "/images/w-step-5.png",
             items: ["Seamless Integration", "Human-in-the-loop", "Performance Tuning"],
             result: "Maximum operational efficiency."
         }
@@ -182,86 +182,48 @@ export default function AIAutomation() {
                                     </div>
                                 </div>
                                 <div className="lg:w-1/2 w-full">
-                                    <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-[#0A0A0A] border-4 border-white h-[400px] p-8 flex flex-col justify-center group/hud">
-                                        <div className="absolute inset-0 opacity-20 transition-transform duration-1000 group-hover/hud:scale-110">
-                                            <Image src={step.image} alt={step.title} fill className="object-cover grayscale" />
-                                        </div>
-                                        
-                                        {i === 0 && (
-                                            <div className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8 relative z-10 transform translate-y-4 group-hover/hud:translate-y-0 transition-all duration-500 shadow-2xl">
-                                                <div className="flex items-center gap-4 mb-8">
-                                                    <div className="w-12 h-12 bg-purple-500 rounded-xl flex items-center justify-center shadow-lg shadow-purple-500/20">
-                                                        <Activity className="text-white" size={24} />
-                                                    </div>
-                                                    <div>
-                                                        <div className="text-[10px] font-black text-purple-400 uppercase tracking-widest">Efficiency Audit</div>
-                                                        <div className="text-white font-black text-lg">Workflow Analysis</div>
-                                                    </div>
-                                                </div>
-                                                <div className="space-y-4">
-                                                    <div className="flex justify-between items-end">
-                                                        <div className="text-[10px] font-bold text-white/40 uppercase">Bottleneck Density</div>
-                                                        <div className="text-xs font-black text-red-400">High</div>
-                                                    </div>
-                                                    <div className="h-2 w-full bg-white/10 rounded-full overflow-hidden">
-                                                        <div className="h-full w-[75%] bg-red-500/50"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        )}
-
-                                        {i === 1 && (
-                                            <div className="bg-white/5 backdrop-blur-2xl rounded-2xl border border-white/10 p-8 relative z-10 shadow-2xl">
-                                                <div className="flex items-center gap-4 mb-6">
-                                                    <div className="w-12 h-12 bg-[#56B2C7] rounded-xl flex items-center justify-center shadow-lg shadow-[#56B2C7]/20">
-                                                        <BrainCircuit className="text-white" size={24} />
-                                                    </div>
-                                                    <div>
-                                                        <div className="text-[10px] font-black text-[#56B2C7] uppercase tracking-widest">Model Strategy</div>
-                                                        <div className="text-white font-black text-lg">LLM Selection</div>
-                                                    </div>
-                                                </div>
-                                                <div className="flex flex-wrap gap-2">
-                                                    {["GPT-4o", "Claude 3.5", "Llama 3"].map(m => (
-                                                        <div key={m} className="px-3 py-1 bg-white/10 border border-white/10 rounded text-[10px] font-black text-white">{m}</div>
-                                                    ))}
-                                                </div>
-                                            </div>
-                                        )}
-
-                                        {i === 2 && (
-                                            <div className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8 relative z-10 transform -rotate-2 group-hover/hud:rotate-0 transition-all duration-500 shadow-2xl">
-                                                <div className="flex items-center gap-4 mb-6">
-                                                    <div className="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/20">
-                                                        <Bot className="text-white" size={24} />
-                                                    </div>
-                                                    <div>
-                                                        <div className="text-[10px] font-black text-blue-400 uppercase tracking-widest">Agent Swarm</div>
-                                                        <div className="text-white font-black text-lg">Active Agents</div>
-                                                    </div>
-                                                </div>
-                                                <div className="space-y-3">
-                                                    {[1, 2].map(j => (
-                                                        <div key={j} className="flex items-center gap-3">
-                                                            <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></div>
-                                                            <div className="h-2 w-full bg-white/10 rounded"></div>
-                                                        </div>
-                                                    ))}
-                                                </div>
-                                            </div>
-                                        )}
-
-                                        {i === 3 && (
-                                            <div className="bg-white/5 backdrop-blur-2xl rounded-[2.5rem] border border-white/20 p-10 relative z-10 shadow-2xl overflow-hidden text-center">
-                                                <div className="w-20 h-20 bg-gradient-to-tr from-[#56B2C7] to-emerald-500 rounded-full flex items-center justify-center shadow-2xl mx-auto mb-6 group-hover/hud:scale-110 transition-transform">
-                                                    <Sparkles className="text-white" size={40} />
-                                                </div>
-                                                <div className="text-[10px] font-black text-[#56B2C7] uppercase tracking-[0.3em] mb-2">Automated Ops</div>
-                                                <div className="text-2xl font-black text-white leading-none tracking-tighter">MAX EFFICIENCY</div>
-                                            </div>
-                                        )}
+                                    <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white h-[400px]">
+                                        <Image 
+                                            src={step.image} 
+                                            alt={step.title} 
+                                            fill 
+                                            className="object-cover transition-transform duration-700 hover:scale-105" 
+                                        />
                                     </div>
                                 </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* AI Infrastructure Stack */}
+            <section className="py-24 bg-white relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-tr from-[#56B2C7]/5 via-white to-transparent opacity-40"></div>
+                <div className="container mx-auto px-6 relative z-10">
+                    <div className="text-center mb-20 max-w-2xl mx-auto">
+                         <div className="inline-flex items-center gap-2 mb-6 bg-[#56B2C7]/10 px-4 py-2 rounded-full text-[10px] font-black uppercase text-[#56B2C7] tracking-widest">Model Agnostic Infrastructure</div>
+                         <h2 className="text-4xl md:text-5xl font-heading font-black text-slate-900 mb-6 tracking-tighter">AI <span className="text-[#56B2C7]">Power Architecture</span></h2>
+                         <p className="text-slate-500 font-medium leading-relaxed">We leverage the world&apos;s most advanced models and vector search technologies to build intelligent automation engines.</p>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        {[
+                            { title: "Base Models", items: ["GPT-4o / Reasoning", "Claude 3.5 Sonnet", "Gemini 1.5 Pro", "Llama 3 (70B)", "Mistral Large", "Grok-1", "DALL-E 3", "Sora", "Stable Diffusion", "Midjourney", "Whisper", "ElevenLabs"] },
+                            { title: "AI Frameworks", items: ["LangChain", "CrewAI", "AutoGen", "Haystack", "LlamaIndex", "Semantic Kernel", "Brev.dev", "Vercel AI SDK", "DSPy", "Instructor", "PydanticAI", "Flowise"] },
+                            { title: "Vector Ops", items: ["Pinecone", "Weaviate", "Redis Stack", "ChromaDB", "Zilliz", "Milvus", "Qdrant", "Elasticsearch", "SingleStore", "Faiss", "LanceDB", "MongoDB Atlas"] },
+                            { title: "Agents & Logic", items: ["Python (FastAPI)", "Node.js", "n8n", "Make.com", "Zapier Central", "Bee-Agent", "Fetch.ai", "SuperAGI", "BabyAGI", "AgentGPT", "HyperWrite", "MultiOn"] }
+                        ].map((cat, i) => (
+                            <div key={i} className="bg-slate-50 p-8 rounded-[2rem] border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500 group relative">
+                                <div className="absolute top-8 right-8 text-[40px] font-serif italic text-slate-200 opacity-20 pointer-events-none">{i+1}</div>
+                                <h4 className="text-slate-900 font-black text-sm mb-8 underline decoration-[#56B2C7] decoration-4 underline-offset-8 decoration-opacity-10 group-hover:decoration-opacity-100 transition-all uppercase tracking-widest">{cat.title}</h4>
+                                <ul className="grid grid-cols-1 gap-y-3">
+                                    {cat.items.map((t, idx) => (
+                                        <li key={idx} className="text-slate-600 font-bold text-[11px] flex items-center gap-3 group-hover:translate-x-1 transition-transform">
+                                            <div className="w-1 h-1 bg-[#56B2C7] rounded-full"></div> {t}
+                                        </li>
+                                    ))}
+                                </ul>
                             </div>
                         ))}
                     </div>
