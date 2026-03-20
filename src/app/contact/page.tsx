@@ -14,7 +14,7 @@ export default function Contact() {
         email: "",
         phone: "",
         company: "",
-        service: "Web Development",
+        service: "Software Development",
         message: ""
     });
 
@@ -32,7 +32,7 @@ export default function Contact() {
 
             if (res.ok) {
                 setSubmitted(true);
-                setFormData({ name: "", email: "", phone: "", company: "", service: "Web Development", message: "" });
+                setFormData({ name: "", email: "", phone: "", company: "", service: "Software Development", message: "" });
             } else {
                 const data = await res.json();
                 setError(data.message || "Something went wrong. Please try again.");
@@ -198,10 +198,10 @@ export default function Contact() {
                                                 onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                                                 className="w-full bg-[#F4F4F4] border-transparent rounded-xl px-5 py-4 focus:bg-white focus:ring-2 focus:ring-[#56B2C7] transition-all outline-none font-bold text-slate-900 appearance-none cursor-pointer"
                                             >
-                                                <option>Web Development</option>
-                                                <option>Digital Marketing</option>
-                                                <option>Video Production</option>
-                                                <option>Full Digital Suit</option>
+                                                <option>Software Development</option>
+                                                <option>B2B SaaS Solutions</option>
+                                                <option>AI Automation</option>
+                                                <option>Full Digital Suite</option>
                                             </select>
                                         </div>
                                         <div>

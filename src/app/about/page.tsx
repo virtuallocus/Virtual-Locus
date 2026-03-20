@@ -21,8 +21,8 @@ export default function About() {
                         About Virtual Locus
                     </h1>
                     <p className="text-xl text-slate-500 max-w-3xl mx-auto leading-relaxed font-medium">
-                        We are a high-performance digital agency dedicated to building systems that
-                        empower businesses to scale through technology, creativity, and data-driven strategy.
+                        We are a high-performance software agency dedicated to building systems that
+                        empower businesses to scale through AI-driven automation, robust SaaS infrastructure, and powerful software development.
                     </p>
                 </div>
             </section>
@@ -39,8 +39,8 @@ export default function About() {
                                 approach ensures that every pixel and every line of code serves a specific business purpose.
                             </p>
                             <p className="text-slate-600 leading-relaxed font-medium">
-                                We combine technical excellence with strategic marketing insights to deliver
-                                results that move the needle.
+                                We combine technical excellence with cutting-edge AI automation to deliver
+                                software solutions that drive real operational impact.
                             </p>
                         </div>
                         <div className="lg:w-1/2">

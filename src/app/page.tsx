@@ -15,37 +15,37 @@ import * as ga from "@/lib/ga";
 export default function Home() {
   const services = [
     {
-      title: "Web Development",
-      description: "Custom websites, high-converting eCommerce platforms, and robust web applications.",
+      title: "Software Development",
+      description: "Custom enterprise software, robust full-stack applications, and high-performance digital products engineered for scale.",
       icon: Code2,
-      href: "/web-development",
-      image: "/images/web-dev.png",
-      ctaText: "Build Your Website",
+      href: "/software-development",
+      image: "/images/web-hero.png",
+      ctaText: "Build Your Software",
     },
     {
-      title: "Digital Marketing",
-      description: "Performance-focused marketing strategies and end-to-end brand growth services.",
-      icon: Megaphone,
-      href: "/marketing",
-      image: "/images/marketing.png",
-      ctaText: "Grow Your Brand",
+      title: "B2B SaaS Solutions",
+      description: "End-to-end SaaS platform development, tenant management, and cloud-native architecture.",
+      icon: Search,
+      href: "/saas",
+      image: "/images/marketing-hero.png",
+      ctaText: "Launch Your SaaS",
     },
     {
-      title: "Video Production",
-      description: "Cinematic commercials, brand films, and viral-ready social media content.",
-      icon: Video,
-      href: "/video-production",
-      image: "/images/video.png",
-      ctaText: "Start Production",
+      title: "AI Automation",
+      description: "Intelligent agentic workflows, custom LLM integrations, and machine learning models to 10x your business efficiency.",
+      icon: Rocket,
+      href: "/ai-automation",
+      image: "/images/hero.png",
+      ctaText: "Automate Now",
     },
   ];
 
   const processSteps = [
-    { title: "Discovery", desc: "We analyze your unique business goals and challenges.", icon: Search },
-    { title: "Strategy", desc: "Defining digital plans that drive sustainable growth.", icon: Target },
-    { title: "Design & Dev", desc: "Building high-performance, tailored digital systems.", icon: Cpu },
-    { title: "Launch", desc: "Rigorous testing and optimization and smooth deployment.", icon: Rocket },
-    { title: "Growth", desc: "Continuous improvement, scaling, and future operation.", icon: LineChart },
+    { title: "Discovery", desc: "We analyze your unique business goals and challenges.", icon: Search, image: "/images/v-step-1.png" },
+    { title: "Strategy", desc: "Defining digital plans that drive sustainable growth.", icon: Target, image: "/images/v-step-2.png" },
+    { title: "Design & Dev", desc: "Building high-performance, tailored digital systems.", icon: Cpu, image: "/images/v-step-3.png" },
+    { title: "Launch", desc: "Rigorous testing and optimization and smooth deployment.", icon: Rocket, image: "/images/v-step-4.png" },
+    { title: "Growth", desc: "Continuous improvement, scaling, and future operation.", icon: LineChart, image: "/images/w-step-6.png" },
   ];
 
   return (
@@ -63,8 +63,8 @@ export default function Home() {
                 <span className="text-primary-sky italic">That Grow <br className="hidden md:block" /> Businesses.</span>
               </h1>
               <p className="text-sm sm:text-base text-slate-500 mb-10 max-w-lg leading-relaxed font-medium">
-                Web Development • Marketing • Video Production. <br />
-                Tailored high-performance solutions designed for scale.
+                Software Development • B2B SaaS • AI Automation. <br />
+                Tailored high-performance engineering designed for scale.
               </p>
               <div className="flex flex-col sm:flex-row items-center gap-4">
                 <Link
@@ -137,14 +137,29 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
             {processSteps.map((step, index) => (
               <div key={index} className="flex flex-col items-center text-center group">
-                <div className="w-16 h-16 bg-[#E8F6F8] rounded-full flex items-center justify-center text-[#56B2C7] mb-6 group-hover:bg-[#56B2C7] group-hover:text-white transition-all duration-300 shadow-sm relative">
-                  <div className="absolute -top-2 -left-2 bg-white w-7 h-7 rounded-full shadow-md flex items-center justify-center text-[#56B2C7] text-[10px] font-black border border-slate-50">
-                    0{index + 1}
-                  </div>
-                  <step.icon size={28} />
+                <div className="relative w-full aspect-square mb-6 rounded-2xl overflow-hidden shadow-md group-hover:shadow-2xl transition-all border-4 border-white bg-[#0A0A0A] p-0 flex items-center justify-center overflow-hidden">
+                   <div className="absolute inset-0 opacity-20 group-hover:opacity-40 transition-opacity duration-500 overflow-hidden">
+                      <Image 
+                        src={step.image} 
+                        alt={step.title}
+                        fill
+                        className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-110 group-hover:scale-100"
+                      />
+                   </div>
+                   
+                   {/* Mini HUD Overlay */}
+                   <div className="relative z-10 w-full px-4 group-hover:scale-110 transition-transform duration-500">
+                      <div className="bg-white/5 backdrop-blur-xl rounded-xl border border-white/10 p-4 shadow-2xl">
+                         <div className="text-[#56B2C7] mb-2 transform group-hover:rotate-12 transition-transform">
+                            <step.icon size={24} className="mx-auto" />
+                         </div>
+                         <div className="text-[8px] font-black text-white/50 uppercase tracking-widest mb-1">Phase 0{index + 1}</div>
+                         <div className="text-white font-black text-[10px] leading-tight">{step.title}</div>
+                      </div>
+                   </div>
                 </div>
-                <h3 className="text-lg font-heading font-black text-slate-900 mb-3">{step.title}</h3>
-                <p className="text-slate-500 text-xs leading-relaxed font-medium px-4">{step.desc}</p>
+                <h3 className="text-lg font-heading font-black text-slate-900 mb-2">{step.title}</h3>
+                <p className="text-slate-500 text-[10px] leading-relaxed font-medium px-2">{step.desc}</p>
               </div>
             ))}
           </div>
@@ -159,7 +174,7 @@ export default function Home() {
               Why We&apos;re Different
             </h2>
             <p className="text-slate-500 text-lg font-medium max-w-2xl mx-auto">
-              Most agencies provide services. We build growth-centered digital ecosystems that outperform traditional marketing.
+              Most agencies provide services. We build scalable software ecosystems that outperform traditional off-the-shelf solutions.
             </p>
           </div>
 
@@ -171,10 +186,10 @@ export default function Home() {
               </div>
               <ul className="space-y-8 flex-grow">
                 {[
-                  "Disconnected services (Marketing vs Dev)",
-                  "Focus on vanity metrics (Likes/Follows)",
-                  "Generic templates & one-size-fits-all",
-                  "Hidden costs and slow communication",
+                  "Disconnected services (Engineering vs Strategy)",
+                  "Focus on vanity features rather than user growth",
+                  "Generic templates & one-size-fits-all code",
+                  "Hidden costs and slow iteration cycles",
                   "Short-term project mindset"
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-4 text-slate-400">
@@ -200,9 +215,9 @@ export default function Home() {
 
               <ul className="space-y-8 flex-grow">
                 {[
-                  { title: "Unified Systems", desc: "We integrate Dev, Marketing, and Content into one cohesive growth engine." },
-                  { title: "Revenue-First Approach", desc: "We focus on real business ROI, not just traffic and empty numbers." },
-                  { title: "Bespoke Architecture", desc: "Every solution is custom-engineered for your specific brand challenges." },
+                  { title: "Unified Systems", desc: "We integrate full-stack Development, SaaS architecture, and AI automation into one cohesive engine." },
+                  { title: "Revenue-First Approach", desc: "We focus on real business impact, operational efficiency, and scalable ROI." },
+                  { title: "Bespoke Architecture", desc: "Every solution is custom-engineered for your specific operational challenges." },
                   { title: "Transparency & Speed", desc: "Complete visibility into our process with rapid iterative delivery." },
                   { title: "Growth Partnership", desc: "We scale with you, acting as your dedicated technical & strategy team." }
                 ].map((item, i) => (
@@ -225,7 +240,7 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="bg-[#56B2C7] rounded-[2.5rem] py-20 px-10 text-center relative overflow-hidden shadow-2xl">
             <h2 className="text-3xl sm:text-4xl md:text-6xl font-heading font-black text-white mb-6 tracking-tighter">
-              Ready to Build Your <br /> Digital Presence?
+              Ready to Build Your <br /> Software Infrastructure?
             </h2>
             <p className="text-white/90 text-base sm:text-lg mb-12 max-w-2xl mx-auto font-medium">
               Let&apos;s discuss how our systems can transform your business trajectory.

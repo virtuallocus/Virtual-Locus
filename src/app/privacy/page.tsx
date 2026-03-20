@@ -57,7 +57,7 @@ export default function PrivacyPolicy() {
                         <div className="lg:w-3/4 max-w-3xl">
                             <div className="prose prose-slate prose-lg max-w-none">
                                 <p className="text-xl text-slate-600 font-medium leading-relaxed mb-12">
-                                    Virtual Locus (&ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;us&rdquo;) is a premium digital agency offering web development, digital marketing, and video production services. This Privacy Policy explains how we collect, use, and protect your personal information when you visit our website or engage with our services.
+                                    Virtual Locus (&ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;us&rdquo;) is a premium software agency offering software development, B2B SaaS solutions, and AI automation services. This Privacy Policy explains how we collect, use, and protect your personal information when you visit our website or engage with our services.
                                 </p>
                                 <p className="text-slate-600 font-medium leading-relaxed mb-16">
                                     By using our website or contacting us, you agree to the practices described in this policy.
@@ -246,7 +246,7 @@ export default function PrivacyPolicy() {
                                                 <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-[#56B2C7] mb-6">Business Identity</h4>
                                                 <p className="text-lg font-bold">Virtual Locus</p>
                                                 <p className="text-white/60 text-sm font-medium mt-2 leading-relaxed max-w-xs">
-                                                    Premium digital agency engineering high-performance growth systems for modern brands.
+                                                    Premium software agency engineering high-performance systems for modern businesses.
                                                 </p>
                                             </div>
                                         </div>

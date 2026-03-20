@@ -21,7 +21,7 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   title: "VIRTUAL LOCUS",
-  description: "VIRTUAL LOCUS delivers high-impact web development, performance-driven marketing, and cinematic storytelling for modern brands.",
+  description: "VIRTUAL LOCUS delivers high-impact software development, scalable B2B SaaS solutions, and intelligent AI automation for modern businesses.",
   metadataBase: new URL('https://www.virtuallocus.in'),
   twitter: {
     card: "summary_large_image",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     title: "VIRTUAL LOCUS",
-    description: "VIRTUAL LOCUS delivers high-impact web development, performance-driven marketing, and cinematic storytelling for modern brands.",
+    description: "VIRTUAL LOCUS delivers high-impact software development, scalable B2B SaaS solutions, and intelligent AI automation for modern businesses.",
     siteName: "Virtual Locus",
   },
   icons: {
