@@ -83,7 +83,7 @@ export default function SoftwareDevelopment() {
                     <div className="mt-16 relative rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white mx-auto max-w-5xl group">
                         <div className="relative h-[400px] md:h-[500px] w-full">
                             <Image 
-                                src="/images/web-hero.png"
+                                src="/images/software-dev-concept.png"
                                 alt="Software Development Environment"
                                 fill
                                 className="object-cover transition-transform duration-700 group-hover:scale-105"

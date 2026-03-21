@@ -19,7 +19,7 @@ export default function Home() {
       description: "Custom enterprise software, robust full-stack applications, and high-performance digital products engineered for scale.",
       icon: Code2,
       href: "/software-development",
-      image: "/images/web-hero.png",
+      image: "/images/software-dev-concept.png",
       ctaText: "Build Your Software",
     },
     {
@@ -27,7 +27,7 @@ export default function Home() {
       description: "End-to-end SaaS platform development, tenant management, and cloud-native architecture.",
       icon: Search,
       href: "/saas",
-      image: "/images/marketing-hero.png",
+      image: "/images/saas-solution.png",
       ctaText: "Launch Your SaaS",
     },
     {
@@ -35,7 +35,7 @@ export default function Home() {
       description: "Intelligent agentic workflows, custom LLM integrations, and machine learning models to 10x your business efficiency.",
       icon: Rocket,
       href: "/ai-automation",
-      image: "/images/hero.png",
+      image: "/images/ai-automation-agent.png",
       ctaText: "Automate Now",
     },
   ];

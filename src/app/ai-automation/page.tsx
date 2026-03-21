@@ -87,7 +87,7 @@ export default function AIAutomation() {
                     <div className="mt-16 relative rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white mx-auto max-w-5xl group">
                         <div className="relative h-[400px] md:h-[500px] w-full bg-slate-900">
                             <Image 
-                                src="/images/hero.png"
+                                src="/images/ai-automation-agent.png"
                                 alt="AI Automation Interface"
                                 fill
                                 className="object-cover transition-transform duration-[2000ms] group-hover:scale-125"

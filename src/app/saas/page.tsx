@@ -83,7 +83,7 @@ export default function SaaSDevelopment() {
                     <div className="mt-16 relative rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white mx-auto max-w-5xl group">
                         <div className="relative h-[400px] md:h-[500px] w-full">
                             <Image 
-                                src="/images/marketing-hero.png"
+                                src="/images/saas-solution.png"
                                 alt="B2B SaaS Analytics"
                                 fill
                                 className="object-cover transition-transform duration-1000 group-hover:scale-110"
